@@ -99,3 +99,26 @@ SELECT author_lname AS 'Forwards', REVERSE(author_lname) AS 'Backwards' FROM boo
 -- | Foster Wallace | ecallaW retsoF |
 -- | Foster Wallace | ecallaW retsoF |
 -- +----------------+----------------+
+
+SELECT UPPER(CONCAT_WS(' ', author_fname, author_lname)) AS 'Full Name in CAPS' FROM books;
+
+-- +----------------------+
+-- | Full Name in CAPS    |
+-- +----------------------+
+-- | JHUMPA LAHIRI        |
+-- | NEIL GAIMAN          |
+-- | NEIL GAIMAN          |
+-- | JHUMPA LAHIRI        |
+-- | DAVE EGGERS          |
+-- | DAVE EGGERS          |
+-- | MICHAEL CHABON       |
+-- | PATTI SMITH          |
+-- | DAVE EGGERS          |
+-- | NEIL GAIMAN          |
+-- | RAYMOND CARVER       |
+-- | RAYMOND CARVER       |
+-- | DON DELILLO          |
+-- | JOHN STEINBECK       |
+-- | DAVID FOSTER WALLACE |
+-- | DAVID FOSTER WALLACE |
+-- +----------------------+
