@@ -1,5 +1,10 @@
- SELECT UPPER("Why does my cat look at me with such hatred?");
  SELECT REVERSE(UPPER("Why does my cat look at me with such hatred?"));
+
+-- +----------------------------------------------------------------+
+-- | REVERSE(UPPER("Why does my cat look at me with such hatred?")) |
+-- +----------------------------------------------------------------+
+-- | ?DERTAH HCUS HTIW EM TA KOOL TAC YM SEOD YHW                   |
+-- +----------------------------------------------------------------+
 
  SELECT
    REPLACE
@@ -9,7 +14,13 @@
    '-'
    ) AS 'Replace and Concat';
 
---  SELECT REPLACE(title, ' ', '->') AS 'Title' FROM books;
+-- +--------------------+
+-- | Replace and Concat |
+-- +--------------------+
+-- | I-like-cats        |
+-- +--------------------+
+
+ SELECT REPLACE(title, ' ', '->') AS 'Title' FROM books;
 
 -- +--------------------------------------------------------------+
 -- | Title                                                        |
@@ -32,7 +43,8 @@
 -- | Consider->the->Lobster                                       |
 -- +--------------------------------------------------------------+
 
--- SELECT author_lname AS 'Forwards', REVERSE(author_lname) AS 'Backwards' FROM books;
+SELECT author_lname AS 'Forwards', REVERSE(author_lname) AS 'Backwards' FROM books;
+
 -- +----------------+----------------+
 -- | Forwards       | Backwards      |
 -- +----------------+----------------+
