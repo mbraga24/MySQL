@@ -122,3 +122,26 @@ SELECT UPPER(CONCAT_WS(' ', author_fname, author_lname)) AS 'Full Name in CAPS' 
 -- | DAVID FOSTER WALLACE |
 -- | DAVID FOSTER WALLACE |
 -- +----------------------+
+
+SELECT CONCAT(title, ' was released in ', released_year) AS "Book's release year" FROM books;
+
+-- +--------------------------------------------------------------------------+
+-- | Book's release year                                                      |
+-- +--------------------------------------------------------------------------+
+-- | The Namesake was released in 2003                                        |
+-- | Norse Mythology was released in 2016                                     |
+-- | American Gods was released in 2001                                       |
+-- | Interpreter of Maladies was released in 1996                             |
+-- | A Hologram for the King: A Novel was released in 2012                    |
+-- | The Circle was released in 2013                                          |
+-- | The Amazing Adventures of Kavalier & Clay was released in 2000           |
+-- | Just Kids was released in 2010                                           |
+-- | A Heartbreaking Work of Staggering Genius was released in 2001           |
+-- | Coraline was released in 2003                                            |
+-- | What We Talk About When We Talk About Love: Stories was released in 1981 |
+-- | Where I'm Calling From: Selected Stories was released in 1989            |
+-- | White Noise was released in 1985                                         |
+-- | Cannery Row was released in 1945                                         |
+-- | Oblivion: Stories was released in 2004                                   |
+-- | Consider the Lobster was released in 2005                                |
+-- +--------------------------------------------------------------------------+
