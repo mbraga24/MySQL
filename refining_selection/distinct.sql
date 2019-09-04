@@ -38,13 +38,63 @@ INSERT INTO books
            ('fake_book', 'Freida', 'Harris', 2001, 287, 428),
            ('Lincoln In The Bardo', 'George', 'Saunders', 2017, 1000, 367);
 
-
+-- SQL COMMANDS
 
 SELECT DISTINCT author_lname 
 FROM books;
 
+-- +----------------+
+-- | author_lname   |
+-- +----------------+
+-- | Lahiri         |
+-- | Gaiman         |
+-- | Eggers         |
+-- | Chabon         |
+-- | Smith          |
+-- | Carver         |
+-- | DeLillo        |
+-- | Steinbeck      |
+-- | Foster Wallace |
+-- | Harris         |
+-- | Saunders       |
+-- +----------------+
+
 SELECT DISTINCT CONCAT(author_fname, ' ', author_lname) AS 'Unique Name' 
 FROM books;
 
+-- +----------------------+
+-- | Unique Name          |
+-- +----------------------+
+-- | Jhumpa Lahiri        |
+-- | Neil Gaiman          |
+-- | Dave Eggers          |
+-- | Michael Chabon       |
+-- | Patti Smith          |
+-- | Raymond Carver       |
+-- | Don DeLillo          |
+-- | John Steinbeck       |
+-- | David Foster Wallace |
+-- | Dan Harris           |
+-- | Freida Harris        |
+-- | George Saunders      |
+-- +----------------------+
+
 SELECT DISTINCT author_fname AS First, author_lname AS Last
 FROM books;
+
+-- +---------+----------------+
+-- | First   | Last           |
+-- +---------+----------------+
+-- | Jhumpa  | Lahiri         |
+-- | Neil    | Gaiman         |
+-- | Dave    | Eggers         |
+-- | Michael | Chabon         |
+-- | Patti   | Smith          |
+-- | Raymond | Carver         |
+-- | Don     | DeLillo        |
+-- | John    | Steinbeck      |
+-- | David   | Foster Wallace |
+-- | Dan     | Harris         |
+-- | Freida  | Harris         |
+-- | George  | Saunders       |
+-- +---------+----------------+
