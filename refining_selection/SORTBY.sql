@@ -172,3 +172,108 @@ SELECT author_fname, author_lname, title, released_year FROM books ORDER BY auth
 -- | Raymond      | Carver         | Where I'm Calling From: Selected Stories            |          1989 |
 -- +--------------+----------------+-----------------------------------------------------+---------------+
 
+-- Will ORDER BY released_year (ASCEDING ORDER - DEFAULT) -
+SELECT title, author_fname, author_lname, released_year FROM books ORDER BY 4;
+
+-- +-----------------------------------------------------+--------------+----------------+---------------+
+-- | title                                               | author_fname | author_lname   | released_year |
+-- +-----------------------------------------------------+--------------+----------------+---------------+
+-- | Cannery Row                                         | John         | Steinbeck      |          1945 |
+-- | What We Talk About When We Talk About Love: Stories | Raymond      | Carver         |          1981 |
+-- | White Noise                                         | Don          | DeLillo        |          1985 |
+-- | Where I'm Calling From: Selected Stories            | Raymond      | Carver         |          1989 |
+-- | Interpreter of Maladies                             | Jhumpa       | Lahiri         |          1996 |
+-- | The Amazing Adventures of Kavalier & Clay           | Michael      | Chabon         |          2000 |
+-- | American Gods                                       | Neil         | Gaiman         |          2001 |
+-- | fake_book                                           | Freida       | Harris         |          2001 |
+-- | A Heartbreaking Work of Staggering Genius           | Dave         | Eggers         |          2001 |
+-- | The Namesake                                        | Jhumpa       | Lahiri         |          2003 |
+-- | Coraline                                            | Neil         | Gaiman         |          2003 |
+-- | Oblivion: Stories                                   | David        | Foster Wallace |          2004 |
+-- | Consider the Lobster                                | David        | Foster Wallace |          2005 |
+-- | Just Kids                                           | Patti        | Smith          |          2010 |
+-- | A Hologram for the King: A Novel                    | Dave         | Eggers         |          2012 |
+-- | The Circle                                          | Dave         | Eggers         |          2013 |
+-- | 10% Happier                                         | Dan          | Harris         |          2014 |
+-- | Norse Mythology                                     | Neil         | Gaiman         |          2016 |
+-- | Lincoln In The Bardo                                | George       | Saunders       |          2017 |
+-- +-----------------------------------------------------+--------------+----------------+---------------+
+
+-- Will ORDER BY released_year (DESCCENDING ORDER - DESC) - 
+SELECT title, author_fname, author_lname, released_year FROM books ORDER BY 4 DESC;
+
+-- +-----------------------------------------------------+--------------+----------------+---------------+
+-- | Lincoln In The Bardo                                | George       | Saunders       |          2017 |
+-- | Norse Mythology                                     | Neil         | Gaiman         |          2016 |
+-- | 10% Happier                                         | Dan          | Harris         |          2014 |
+-- | The Circle                                          | Dave         | Eggers         |          2013 |
+-- | A Hologram for the King: A Novel                    | Dave         | Eggers         |          2012 |
+-- | Just Kids                                           | Patti        | Smith          |          2010 |
+-- | Consider the Lobster                                | David        | Foster Wallace |          2005 |
+-- | Oblivion: Stories                                   | David        | Foster Wallace |          2004 |
+-- | Coraline                                            | Neil         | Gaiman         |          2003 |
+-- | The Namesake                                        | Jhumpa       | Lahiri         |          2003 |
+-- | fake_book                                           | Freida       | Harris         |          2001 |
+-- | American Gods                                       | Neil         | Gaiman         |          2001 |
+-- | A Heartbreaking Work of Staggering Genius           | Dave         | Eggers         |          2001 |
+-- | The Amazing Adventures of Kavalier & Clay           | Michael      | Chabon         |          2000 |
+-- | Interpreter of Maladies                             | Jhumpa       | Lahiri         |          1996 |
+-- | Where I'm Calling From: Selected Stories            | Raymond      | Carver         |          1989 |
+-- | White Noise                                         | Don          | DeLillo        |          1985 |
+-- | What We Talk About When We Talk About Love: Stories | Raymond      | Carver         |          1981 |
+-- | Cannery Row                                         | John         | Steinbeck      |          1945 |
+-- +-----------------------------------------------------+--------------+----------------+---------------+
+
+-- Notice Freida Harris and Dan Harris (1) -
+SELECT author_fname, author_lname FROM books ORDER BY author_lname;
+
+-- +--------------+----------------+
+-- | author_fname | author_lname   |
+-- +--------------+----------------+
+-- | Raymond      | Carver         |
+-- | Raymond      | Carver         |
+-- | Michael      | Chabon         |
+-- | Don          | DeLillo        |
+-- | Dave         | Eggers         |
+-- | Dave         | Eggers         |
+-- | Dave         | Eggers         |
+-- | David        | Foster Wallace |
+-- | David        | Foster Wallace |
+-- | Neil         | Gaiman         |
+-- | Neil         | Gaiman         |
+-- | Neil         | Gaiman         |
+-- | Freida       | Harris         |
+-- | Dan          | Harris         |
+-- | Jhumpa       | Lahiri         |
+-- | Jhumpa       | Lahiri         |
+-- | George       | Saunders       |
+-- | Patti        | Smith          |
+-- | John         | Steinbeck      |
+-- +--------------+----------------+
+
+-- Notice Freida Harris and Dan Harris (2) -
+SELECT author_fname, author_lname FROM books ORDER BY author_fname, author_lname;
+
+-- +--------------+----------------+
+-- | author_fname | author_lname   |
+-- +--------------+----------------+
+-- | Dan          | Harris         |
+-- | Dave         | Eggers         |
+-- | Dave         | Eggers         |
+-- | Dave         | Eggers         |
+-- | David        | Foster Wallace |
+-- | David        | Foster Wallace |
+-- | Don          | DeLillo        |
+-- | Freida       | Harris         |
+-- | George       | Saunders       |
+-- | Jhumpa       | Lahiri         |
+-- | Jhumpa       | Lahiri         |
+-- | John         | Steinbeck      |
+-- | Michael      | Chabon         |
+-- | Neil         | Gaiman         |
+-- | Neil         | Gaiman         |
+-- | Neil         | Gaiman         |
+-- | Patti        | Smith          |
+-- | Raymond      | Carver         |
+-- | Raymond      | Carver         |
+-- +--------------+----------------+
