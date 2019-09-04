@@ -32,7 +32,10 @@ VALUES
 ('Oblivion: Stories', 'David', 'Foster Wallace', 2004, 172, 329),
 ('Consider the Lobster', 'David', 'Foster Wallace', 2005, 92, 343);
 
- SELECT REVERSE(UPPER("Why does my cat look at me with such hatred?"));
+SELECT REVERSE
+	(
+		UPPER("Why does my cat look at me with such hatred?")
+	);
 
 -- +----------------------------------------------------------------+
 -- | REVERSE(UPPER("Why does my cat look at me with such hatred?")) |
@@ -40,13 +43,13 @@ VALUES
 -- | ?DERTAH HCUS HTIW EM TA KOOL TAC YM SEOD YHW                   |
 -- +----------------------------------------------------------------+
 
- SELECT
-   REPLACE
-   (
-   CONCAT('I', ' ', 'like', ' ', 'cats'),
-   ' ',
-   '-'
-   ) AS 'Replace and Concat';
+SELECT
+  REPLACE
+  (
+  CONCAT('I', ' ', 'like', ' ', 'cats'),
+  ' ',
+  '-'
+  ) AS 'Replace and Concat';
 
 -- +--------------------+
 -- | Replace and Concat |
@@ -54,7 +57,8 @@ VALUES
 -- | I-like-cats        |
 -- +--------------------+
 
- SELECT REPLACE(title, ' ', '->') AS 'Title' FROM books;
+SELECT REPLACE(title, ' ', '->') AS 'Title' 
+FROM books;
 
 -- +--------------------------------------------------------------+
 -- | Title                                                        |
@@ -77,7 +81,9 @@ VALUES
 -- | Consider->the->Lobster                                       |
 -- +--------------------------------------------------------------+
 
-SELECT author_lname AS 'Forwards', REVERSE(author_lname) AS 'Backwards' FROM books;
+SELECT author_lname AS Forwards, 
+	REVERSE(author_lname) AS Backwards 
+FROM books;
 
 -- +----------------+----------------+
 -- | Forwards       | Backwards      |
@@ -100,7 +106,12 @@ SELECT author_lname AS 'Forwards', REVERSE(author_lname) AS 'Backwards' FROM boo
 -- | Foster Wallace | ecallaW retsoF |
 -- +----------------+----------------+
 
-SELECT UPPER(CONCAT_WS(' ', author_fname, author_lname)) AS 'Full Name in CAPS' FROM books;
+SELECT UPPER
+	(
+		CONCAT_WS(' ', author_fname, author_lname)
+	)
+	AS 'Full Name in CAPS' 
+FROM books;
 
 -- +----------------------+
 -- | Full Name in CAPS    |
@@ -123,7 +134,8 @@ SELECT UPPER(CONCAT_WS(' ', author_fname, author_lname)) AS 'Full Name in CAPS' 
 -- | DAVID FOSTER WALLACE |
 -- +----------------------+
 
-SELECT CONCAT(title, ' was released in ', released_year) AS "Book's release year" FROM books;
+SELECT CONCAT(title, ' was released in ', released_year) AS "Book's release year" 
+FROM books;
 
 -- +--------------------------------------------------------------------------+
 -- | Book's release year                                                      |
@@ -146,7 +158,9 @@ SELECT CONCAT(title, ' was released in ', released_year) AS "Book's release year
 -- | Consider the Lobster was released in 2005                                |
 -- +--------------------------------------------------------------------------+
 
-SELECT title AS 'Title', CHAR_LENGTH(title) AS 'Character Count' FROM books;
+SELECT title AS 'Title', 
+			 CHAR_LENGTH(title) AS 'Character Count' 
+FROM books;
 
 -- +-----------------------------------------------------+-----------------+
 -- | Title                                               | Character Count |
