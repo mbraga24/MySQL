@@ -38,6 +38,8 @@ INSERT INTO books
            ('fake_book', 'Freida', 'Harris', 2001, 287, 428),
            ('Lincoln In The Bardo', 'George', 'Saunders', 2017, 1000, 367);
 
+-- SQL Commands
+
 SELECT author_lname FROM books ORDER BY author_lname;
 
 -- +----------------+
@@ -116,6 +118,34 @@ SELECT released_year FROM books ORDER BY released_year;
 -- |          2017 |
 -- +---------------+
 
+-- DESCENDING ORDER
+
+SELECT released_year FROM books ORDER BY released_year DESC;
+
+-- +---------------+
+-- | released_year |
+-- +---------------+
+-- |          2017 |
+-- |          2016 |
+-- |          2014 |
+-- |          2013 |
+-- |          2012 |
+-- |          2010 |
+-- |          2005 |
+-- |          2004 |
+-- |          2003 |
+-- |          2003 |
+-- |          2001 |
+-- |          2001 |
+-- |          2001 |
+-- |          2000 |
+-- |          1996 |
+-- |          1989 |
+-- |          1985 |
+-- |          1981 |
+-- |          1945 |
+-- +---------------+
+
 SELECT author_fname, author_lname, title, released_year FROM books ORDER BY author_fname;
 
 -- +--------------+----------------+-----------------------------------------------------+---------------+
@@ -141,3 +171,4 @@ SELECT author_fname, author_lname, title, released_year FROM books ORDER BY auth
 -- | Raymond      | Carver         | What We Talk About When We Talk About Love: Stories |          1981 |
 -- | Raymond      | Carver         | Where I'm Calling From: Selected Stories            |          1989 |
 -- +--------------+----------------+-----------------------------------------------------+---------------+
+
