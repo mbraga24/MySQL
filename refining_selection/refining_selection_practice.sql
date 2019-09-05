@@ -50,7 +50,7 @@ SELECT title FROM books WHERE title LIKE '%stories%';
 -- | Oblivion: Stories                                   |
 -- +-----------------------------------------------------+
 
-SELECT title, pages FROM books WHERE pages LIKE '6%';
+SELECT title, pages FROM books ORDER BY pages DESC LIMIT 1;
 
 -- +-------------------------------------------+-------+
 -- | title                                     | pages |
@@ -77,7 +77,7 @@ SELECT title, author_lname FROM books WHERE author_lname LIKE '% %';
 -- | Consider the Lobster | Foster Wallace |
 -- +----------------------+----------------+
 
-SELECT title, released_year, stock_quantity FROM books ORDER BY 3 LIMIT 0,3;
+SELECT title, released_year, stock_quantity FROM books ORDER BY 3 LIMIT 3;
 
 -- +-----------------------------------------------------+---------------+----------------+
 -- | title                                               | released_year | stock_quantity |
