@@ -17,15 +17,15 @@ SELECT * FROM form;
 
 -- CREATE TABLE inventory
 -- (
--- 	item_name ___________ VARCHAR(255),
--- 	price ___________ DECIMAL(6,3),
--- 	quantity ___________ INT
+-- 	item_name ___________
+-- 	price ___________ 
+-- 	quantity ___________ 
 -- );
 
 CREATE TABLE inventory
 (
 	item_name VARCHAR(255),
-	price DECIMAL(6,3),
+	price DECIMAL(8,2),
 	quantity INT
 );
 
